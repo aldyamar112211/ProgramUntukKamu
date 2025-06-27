@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Selamat Datang - Untukmu ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        .pulse-heart {
+            animation: pulse-heart 1.5s ease-in-out infinite;
+        }
+        .sparkle {
+            animation: sparkle 2s linear infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes pulse-heart {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+        .love-gradient {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        }
+        .input-focus:focus {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+    </style>
+</head>
+<body class="gradient-bg font-sans min-h-screen">
+    <!-- Header with Animation -->
+    <div class="p-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-6">
+                <div class="float-animation text-6xl mb-4">💝</div>
+                <h1 class="text-3xl font-bold text-white mb-2">Halo Sayang! ✨</h1>
+                <p class="text-white/80">Ceritakan sedikit tentang dirimu ya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Biodata Form -->
+    <div class="max-w-2xl mx-auto p-4">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 card-hover">
+            <!-- Welcome Message -->
+            <div class="text-center mb-8">
+                <div class="sparkle text-4xl mb-4">🌟</div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Kenalan Yuk!</h2>
+                <p class="text-gray-600">Isi biodata dirimu biar aku kenal kamu lebih dekat 💕</p>
+            </div>
+
+            <!-- Biodata Form -->
+            <form id="biodataForm" class="space-y-6">
+                <!-- Nama -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-pink-500">💖</span> Nama Lengkap
+                    </label>
+                    <input type="text" id="namaLengkap" required
+                           class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-pink-400 input-focus transition-all"
+                           placeholder="Siapa nama cantikmu?">
+                </div>
+
+                <!-- Nama Panggilan -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-blue-500">🎀</span> Nama Panggilan
+                    </label>
+                    <input type="text" id="namaPanggilan" required
+                           class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-400 input-focus transition-all"
+                           placeholder="Aku mau manggil kamu apa?">
+                </div>
+
+                <!-- Umur -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-purple-500">🎂</span> Umur
+                    </label>
+                    <input type="number" id="umur" required min="1" max="150"
+                           class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-400 input-focus transition-all"
+                           placeholder="Berapa umur kamu?">
+                </div>
+
+                <!-- Tanggal Lahir -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-yellow-500">🌟</span> Tanggal Lahir
+                    </label>
+                    <input type="date" id="tanggalLahir" required
+                           class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-yellow-400 input-focus transition-all">
+                </div>
+
+                <!-- Asal Kota -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-green-500">🏠</span> Asal Kota
+                    </label>
+                    <input type="text" id="asalKota" required
+                           class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-400 input-focus transition-all"
+                           placeholder="Kamu tinggal di mana?">
+                </div>
+
+                <!-- Hobi -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-red-500">❤️</span> Hobi Favorit
+                    </label>
+                    <textarea id="hobi" required rows="3"
+                              class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-red-400 input-focus transition-all resize-none"
+                              placeholder="Ceritakan hobi yang kamu suka..."></textarea>
+                </div>
+
+                <!-- Warna Favorit -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-indigo-500">🌈</span> Warna Favorit
+                    </label>
+                    <div class="grid grid-cols-4 gap-3">
+                        <button type="button" onclick="selectColor('Pink', '#ff69b4')" 
+                                class="color-btn p-3 rounded-xl border-2 border-gray-200 hover:scale-105 transition-all" 
+                                style="background: linear-gradient(45deg, #ff69b4, #ff1493)">
+                            <div class="text-white font-semibold text-sm">Pink</div>
+                        </button>
+                        <button type="button" onclick="selectColor('Biru', '#4169e1')" 
+                                class="color-btn p-3 rounded-xl border-2 border-gray-200 hover:scale-105 transition-all" 
+                                style="background: linear-gradient(45deg, #4169e1, #0000ff)">
+                            <div class="text-white font-semibold text-sm">Biru</div>
+                        </button>
+                        <button type="button" onclick="selectColor('Ungu', '#8a2be2')" 
+                                class="color-btn p-3 rounded-xl border-2 border-gray-200 hover:scale-105 transition-all" 
+                                style="background: linear-gradient(45deg, #8a2be2, #9400d3)">
+                            <div class="text-white font-semibold text-sm">Ungu</div>
+                        </button>
+                        <button type="button" onclick="selectColor('Hijau', '#32cd32')" 
+                                class="color-btn p-3 rounded-xl border-2 border-gray-200 hover:scale-105 transition-all" 
+                                style="background: linear-gradient(45deg, #32cd32, #228b22)">
+                            <div class="text-white font-semibold text-sm">Hijau</div>
+                        </button>
+                    </div>
+                    <input type="hidden" id="warnaFavorit" required>
+                    <div id="selectedColor" class="text-center text-gray-500 text-sm mt-2">Pilih warna favoritmu!</div>
+                </div>
+
+                <!-- Makanan Favorit -->
+                <div class="space-y-2">
+                    <label class="block text-gray-700 font-semibold text-sm">
+                        <span class="text-orange-500">🍕</span> Makanan Favorit
+                    </label>
+                    <input type="text" id="makananFavorit" required
+                           class="w-full p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-400 input-focus transition-all"
+                           placeholder="Makanan yang paling kamu suka?">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" 
+                            class="w-full love-gradient text-white p-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all pulse-heart">
+                        ✨ Masuk ke Program Spesial ✨
+                    </button>
+                </div>
+            </form>
+
+            <!-- Cute Footer Message -->
+            <div class="text-center mt-6 p-4 bg-pink-50 rounded-xl">
+                <p class="text-gray-600 text-sm">
+                    <span class="text-pink-500">💕</span> 
+                    Data kamu aman dan hanya digunakan untuk personalisasi pengalaman 
+                    <span class="text-pink-500">💕</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Preview Card (Hidden initially) -->
+        <div id="previewCard" class="bg-white rounded-3xl shadow-2xl p-8 mt-6 card-hover hidden">
+            <div class="text-center mb-6">
+                <div class="text-4xl mb-3">🎉</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Preview Biodata</h3>
+                <p class="text-gray-600">Pastikan data kamu sudah benar ya!</p>
+            </div>
+            <div id="biodataPreview" class="space-y-3 bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
+                <!-- Preview content will be inserted here -->
+            </div>
+            <div class="flex space-x-4 mt-6">
+                <button onclick="hidePreview()" 
+                        class="flex-1 bg-gray-400 text-white p-3 rounded-xl font-semibold hover:bg-gray-500 transition-all">
+                    ← Edit Lagi
+                </button>
+                <button onclick="proceedToMainApp()" 
+                        class="flex-1 love-gradient text-white p-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all">
+                    Lanjut! 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedColorName = '';
+        let biodataData = {};
+
+        // Color selection
+        function selectColor(colorName, colorValue) {
+            selectedColorName = colorName;
+            document.getElementById('warnaFavorit').value = colorName;
+            document.getElementById('selectedColor').innerHTML = `
+                <span style="color: ${colorValue}">✨ ${colorName} dipilih! ✨</span>
+            `;
+            
+            // Update button styles
+            document.querySelectorAll('.color-btn').forEach(btn => {
+                btn.classList.remove('ring-4', 'ring-purple-400');
+            });
+            event.currentTarget.classList.add('ring-4', 'ring-purple-400');
+        }
+
+        // Form submit handler
+        document.getElementById('biodataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Ambil data input
+            const namaLengkap = document.getElementById('namaLengkap').value.trim();
+            const namaPanggilan = document.getElementById('namaPanggilan').value.trim();
+            const umur = document.getElementById('umur').value.trim();
+            const tanggalLahir = document.getElementById('tanggalLahir').value;
+            const asalKota = document.getElementById('asalKota').value.trim();
+            const hobi = document.getElementById('hobi').value.trim();
+            const warnaFavorit = document.getElementById('warnaFavorit').value.trim();
+            const makananFavorit = document.getElementById('makananFavorit').value.trim();
+
+            if (!warnaFavorit) {
+                alert('Tolong pilih warna favorit dulu ya!');
+                return;
+            }
+
+            biodataData = {
+                namaLengkap,
+                namaPanggilan,
+                umur,
+                tanggalLahir,
+                asalKota,
+                hobi,
+                warnaFavorit,
+                makananFavorit
+            };
+
+            showPreview(biodataData);
+        });
+
+        // Show preview card with data
+        function showPreview(data) {
+            const previewCard = document.getElementById('previewCard');
+            const biodataPreview = document.getElementById('biodataPreview');
+
+            // Format tanggal lahir ke format yang lebih enak dibaca (contoh: 29 Mei 2025)
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const tglLahirFormatted = new Date(data.tanggalLahir).toLocaleDateString('id-ID', options);
+
+            biodataPreview.innerHTML = `
+                <p><strong>Nama Lengkap:</strong> ${data.namaLengkap}</p>
+                <p><strong>Nama Panggilan:</strong> ${data.namaPanggilan}</p>
+                <p><strong>Umur:</strong> ${data.umur} tahun</p>
+                <p><strong>Tanggal Lahir:</strong> ${tglLahirFormatted}</p>
+                <p><strong>Asal Kota:</strong> ${data.asalKota}</p>
+                <p><strong>Hobi:</strong> ${data.hobi}</p>
+                <p><strong>Warna Favorit:</strong> ${data.warnaFavorit}</p>
+                <p><strong>Makanan Favorit:</strong> ${data.makananFavorit}</p>
+            `;
+
+            // Sembunyikan form dan tampilkan preview
+            document.getElementById('biodataForm').classList.add('hidden');
+            previewCard.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Hide preview and kembali ke form
+        function hidePreview() {
+            document.getElementById('previewCard').classList.add('hidden');
+            document.getElementById('biodataForm').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Proses lanjut ke program.html sambil simpan data biodata
+        function proceedToMainApp() {
+            // Simpan biodata ke sessionStorage
+            sessionStorage.setItem('userBiodata', JSON.stringify(biodataData));
+
+            // Tampilkan loading di tombol
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ Loading...';
+            btn.disabled = true;
+
+            // Redirect ke halaman program.html setelah delay 1 detik
+            setTimeout(() => {
+                window.location.href = 'program.html';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
